@@ -1,9 +1,105 @@
+<!DOCTYPE HTML>
 <html>
 
-<body>
-  <h1>JOE GUMATAOTAO</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+  <head>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+  </head>
 
+  <body>
+    <h1>CSS Selectors and Specifictity Reference</h1>
+    <div>
+    <table id="table-one">
+     
+     <thead>
+      <tr>
+      <th colspan=3>CSS Selectors</th>
+      </tr>
+      </thead>
+        
+        <tr>
+        <td class="header">Selector</td>
+        <td class="header">Example</td>
+        <td class="header">Description</td>
+        </tr>
+        
+        <tr>
+        <td>element</td>
+        <td>p</td>
+        <td>Selects all &ltp&gt elements</td>
+        </tr>
+        
+        <tr>
+        <td>#id</td>
+        <td>#firstname</td>
+        <td>Selects the element with id="firstname"</td>
+        </tr>
+        
+        <tr>
+        <td>*</td>
+        <td>*</td>
+        <td>Selects all elements</td>
+        </tr>
+
+        <tr>
+        <td>.class</td>
+        <td>.into</td>
+        <td>Selects all elements with class="intro"</td>
+        </tr>
+
+        <tr>
+        <td>element.intro</td>
+        <td>p.intro</td>
+        <td>Selects all &ltp&gt elements with class="intro"</td>
+        </tr>
+
+    </table >
+    </div>
+  
+    <div>
+      <table id="table-two">
+       <thead>
+      <tr>
+      <th colspan=4>CSS Specificity</th>
+      </tr>
+      </thead>
+      <tr>
+        <td class="header">Selector</td>
+        <td class="header">Example</td>
+        <td class="header">Description</td>
+        <td class="header">Weight</td>
+        </tr>
+      <tr>
+        <td>Inline styles</td>
+        <td>&lth1 style="color:pink;"&gt </td>
+        <td>Highest priority, will override all other selectors</td>
+        <td></td>
+        </tr>
+ <tr>
+        <td>Id selectors</td>
+        <td>#firstname</td>
+        <td>Second highest priority</td>
+        <td>1-0-0</td>
+        </tr>
+         <tr>
+        <td>Classes, attribute selectors and pseudo-classes</td>
+        <td>.test, [type="text"], :hover</td>
+        <td>Third highest priority</td>
+        <td>0-1-0</td>
+        </tr>
+                 <tr>
+        <td>Elements and pseudo-elements</td>
+        <td>h1, ::before, ::after</td>
+        <td>Low priority</td>
+        <td>0-0-1</td>
+        </tr>
+                 <tr>
+        <td>Universal selector and :where()</td>
+        <td>*, where()</td>
+        <td>No priority</td>
+        <td>0-0-0</td>
+        </tr>
+    </table>
+      </div>
+  </body>
+  
 </html>
